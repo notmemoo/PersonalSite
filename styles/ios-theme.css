@@ -1,0 +1,39 @@
+/* Additional Theme Tweaks */
+
+/* Custom Scrollbar for desktop to look cleaner */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d1d6;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aeaeb2;
+}
+
+/* Yellow Accent Overrides */
+::selection {
+    background-color: rgba(224, 171, 56, 0.3);
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.02em;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Prepared for future Dark Mode toggle if user wants strict system adherence, 
+       but currently overriding manually in main.css variables */
+}

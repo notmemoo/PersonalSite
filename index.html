@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Memo's Notes</title>
+    <meta name="description" content="Personal portfolio of Memo.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Memo's Notes">
+    <meta property="og:description" content="Personal Portfolio of Memo. Developer, Designer, problem solver.">
+    <meta property="og:image" content="https://notmemoo.github.io/portfolio/assets/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Memo's Notes">
+    <meta property="twitter:description" content="Personal Portfolio of Memo.">
+    <meta property="twitter:image" content="https://notmemoo.github.io/portfolio/assets/og-image.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/ios-theme.css">
+
+    <!-- San Francisco Font Approximation -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="ios-split-view">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="folder-back">
+                    <span class="back-icon">❮</span> Folders
+                </div>
+            </div>
+
+            <h1 class="sidebar-title">Notes</h1>
+
+            <div class="search-bar">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7 12C9.76142 12 12 9.76142 12 7C12 4.23858 9.76142 2 7 2C4.23858 2 2 4.23858 2 7C2 9.76142 4.23858 12 7 12Z"
+                            stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M10.5 10.5L14 14" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <input type="text" placeholder="Search" readonly>
+                </div>
+            </div>
+
+            <ul class="note-list">
+                <!-- Note: 'active' class denotes the currently selected note -->
+                <li class="note-item active" data-id="who-is-memo">
+                    <div class="note-content">
+                        <h3 class="note-title">Who is Memo?</h3>
+                        <div class="note-meta">
+                            <span class="note-time">8:41 PM</span>
+                            <span class="note-preview">I’m the son of immigrants and grew up in a home shaped
+                                by...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="note-item" data-id="projects">
+                    <div class="note-content">
+                        <h3 class="note-title">Things I've Done</h3>
+                        <div class="note-meta">
+                            <span class="note-time">Yesterday</span>
+                            <span class="note-preview">I started recently, and I have two projects I am very proud
+                                of...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="note-item" data-id="future">
+                    <div class="note-content">
+                        <h3 class="note-title">Future & Goals</h3>
+                        <div class="note-meta">
+                            <span class="note-time">Friday</span>
+                            <span class="note-preview">Long term, I’m building a life where my family has
+                                something...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="note-item" data-id="contact">
+                    <div class="note-content">
+                        <h3 class="note-title">Contact</h3>
+                        <div class="note-meta">
+                            <span class="note-time">1/1/26</span>
+                            <span class="note-preview">If you ever want to talk, reach out! I am very happy to...</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <span class="note-count">4 Notes</span>
+                <span class="new-note-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V7.2C3 6.0799 3 5.51984 3.21799 5.09202C3.40973 4.71569 3.71569 4.40973 4.09202 4.21799C4.51984 4 5.0799 4 6.2 4H13.8C14.9201 4 15.4802 4 15.908 4.21799C16.2843 4.40973 16.5903 4.71569 16.782 5.09202C17 5.51984 17 6.0799 17 7.2V11"
+                            stroke="#E0AB38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15.5 19.5L19.5 15.5M19.5 15.5H16.5C15.9477 15.5 15.5 15.9477 15.5 16.5V19.5M19.5 15.5V19.5"
+                            stroke="#E0AB38" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </span>
+            </div>
+        </nav>
+
+        <!-- Main Content Area (The Note) -->
+        <main id="main-editor" class="editor">
+            <div class="editor-header">
+                <button id="mobile-back" class="mobile-back-btn">
+                    <span class="chevron">❮</span> Notes
+                </button>
+                <div class="editor-actions">
+                    <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E0AB38"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E0AB38"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                        <polyline points="16 6 12 2 8 6" />
+                        <line x1="12" y1="2" x2="12" y2="15" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="note-container">
+                <div class="note-date">January 2, 2026 at 8:41 PM</div>
+                <h1 class="note-headline" id="note-title">Who is Memo?</h1>
+                <div class="note-body" id="note-body">
+                    <p>I’m the son of immigrants and grew up in a home shaped by addiction, abuse, and instability after
+                        my father was deported, leaving my mom to raise three kids alone.</p>
+                    <p>For a long time I drifted into my own bad habits, but eventually I stopped seeing myself as a
+                        victim and started taking responsibility for who I want to become...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
