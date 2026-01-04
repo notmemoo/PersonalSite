@@ -71,7 +71,7 @@ I love the stock market and the crypto market, it was a big part of my life from
                 <p>If you ever want to talk, reach out! I am very happy to make connections!</p>
                 <br>
                 <ul>
-                    <li><b>Email:</b> <a href="mailto:memomar168@gmail.com" style="color: #E0AB38; text-decoration: none;">memomar168@gmail.com</a></li>
+                    <li><b>Email:</b> <a href="mailto:gjmartinezjim@gmail.com" style="color: #E0AB38; text-decoration: none;">gjmartinezjim@gmail.com</a></li>
                     <li><b>Twitter:</b> <a href="https://x.com/powerupmemo" target="_blank" style="color: #E0AB38; text-decoration: none;">@powerupmemo</a></li>
                     <li><b>Location:</b> Seattle, WA</li>
                 </ul>
