@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.log
+
+# Helper scripts (local use only)
+check-db.js
+update-notes.js
+sync-notes-to-supabase.js
+sync-supabase.sql
+
+# Environment variables (if you ever add a .env file)
+.env
+.env.local

@@ -28,15 +28,19 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/ios-theme.css">
 
-    <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#F2F2F7">
+    <!-- Theme Color for Mobile Browsers (matches system preference) -->
+    <meta name="theme-color" content="#F2F2F7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- San Francisco Font Approximation with Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -72,8 +76,27 @@
                         <h3 class="note-title">Who is Memo?</h3>
                         <div class="note-meta">
                             <span class="note-time">8:41 PM</span>
-                            <span class="note-preview">I’m the son of immigrants and grew up in a home shaped
+                            <span class="note-preview">I'm the son of immigrants and grew up in a home shaped
                                 by...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="note-item" data-id="currently">
+                    <div class="note-content">
+                        <h3 class="note-title">Currently...</h3>
+                        <div class="note-meta">
+                            <span class="note-time">10:00 AM</span>
+                            <span class="note-preview">What I'm reading, watching, learning, and building right
+                                now...</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="note-item" data-id="thoughts">
+                    <div class="note-content">
+                        <h3 class="note-title">Thoughts</h3>
+                        <div class="note-meta">
+                            <span class="note-time">Jan 13</span>
+                            <span class="note-preview">Random reflections, ideas, and things on my mind...</span>
                         </div>
                     </div>
                 </li>
@@ -81,18 +104,19 @@
                     <div class="note-content">
                         <h3 class="note-title">My Work</h3>
                         <div class="note-meta">
-                            <span class="note-time">Yesterday</span>
-                            <span class="note-preview">I started recently, and I have two projects I am very proud
-                                of...</span>
+                            <span class="note-time">Today</span>
+                            <span class="note-preview">I've made a few projects so far, but these are some that
+                                stand out...</span>
                         </div>
                     </div>
                 </li>
+
                 <li class="note-item" data-id="future">
                     <div class="note-content">
                         <h3 class="note-title">Future & Goals</h3>
                         <div class="note-meta">
                             <span class="note-time">Friday</span>
-                            <span class="note-preview">Long term, I’m building a life where my family has
+                            <span class="note-preview">Long term, I'm building a life where my family has
                                 something...</span>
                         </div>
                     </div>
@@ -106,10 +130,19 @@
                         </div>
                     </div>
                 </li>
+                <li class="note-item" data-id="music">
+                    <div class="note-content">
+                        <h3 class="note-title">Music</h3>
+                        <div class="note-meta">
+                            <span class="note-time">Today</span>
+                            <span class="note-preview">What I'm listening to right now and some of my favorite...</span>
+                        </div>
+                    </div>
+                </li>
             </ul>
 
             <div class="sidebar-footer">
-                <span class="note-count">4 Notes</span>
+                <span class="note-count">7 Notes</span>
                 <span class="new-note-icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -159,6 +192,7 @@
         </main>
     </div>
 
+    <script src="scripts/lastfm-widget.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

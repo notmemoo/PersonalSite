@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Memo's Notes</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles/admin.css">
+
+    <!-- Quill Rich Text Editor -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-container">
+        <div class="login-card">
+            <h1 class="login-title">✏️ Admin Panel</h1>
+            <p class="login-subtitle">Sign in to edit your notes</p>
+            <form id="login-form">
+                <input type="email" id="email-input" class="login-input" placeholder="your@email.com" required>
+                <input type="password" id="password-input" class="login-input" placeholder="Password" required>
+                <button type="submit" class="btn btn-primary login-btn">Sign In</button>
+            </form>
+            <div id="login-message" class="login-message hidden"></div>
+        </div>
+        <p style="margin-top: 20px; color: #8E8E93; font-size: 14px;">
+            <a href="index.html" style="color: #E0AB38;">← Back to site</a>
+        </p>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" class="admin-container hidden">
+        <header class="admin-header">
+            <div>
+                <h1 class="admin-title">📝 Memo's Notes</h1>
+                <p class="admin-subtitle" id="user-email">Logged in as: </p>
+            </div>
+            <div style="display: flex; gap: 12px;">
+                <a href="index.html" class="btn btn-secondary btn-small">View Site</a>
+                <button id="logout-btn" class="btn btn-secondary btn-small">Sign Out</button>
+            </div>
+        </header>
+
+        <!-- Notes List View -->
+        <div id="notes-list-view">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2>Your Notes</h2>
+                <button id="new-note-btn" class="btn btn-primary btn-small">+ New Note</button>
+            </div>
+            <ul id="notes-list" class="notes-list">
+                <li class="loading">Loading notes...</li>
+            </ul>
+        </div>
+
+        <!-- Note Editor View -->
+        <div id="editor-container" class="editor-container">
+            <div class="editor-header">
+                <button id="editor-back" class="editor-back">
+                    <span>❮</span> Back to Notes
+                </button>
+                <button id="delete-note-btn" class="btn btn-danger btn-small hidden">Delete</button>
+            </div>
+            <div class="editor-card">
+                <form id="note-form">
+                    <input type="hidden" id="note-id">
+
+                    <div class="form-group">
+                        <label class="form-label">Title</label>
+                        <input type="text" id="note-title" class="form-input" placeholder="Note title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Sidebar Preview</label>
+                        <input type="text" id="note-preview" class="form-input"
+                            placeholder="Short preview text for sidebar">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Content</label>
+                        <div class="editor-tabs">
+                            <button type="button" class="editor-tab active" data-tab="visual">Visual</button>
+                            <button type="button" class="editor-tab" data-tab="html">HTML Code</button>
+                        </div>
+                        <div class="editor-panel active" id="visual-panel">
+                            <div id="quill-editor"></div>
+                        </div>
+                        <div class="editor-panel" id="html-panel">
+                            <textarea id="html-editor" class="html-editor"
+                                placeholder="Write or paste HTML here..."></textarea>
+                            <div class="html-preview-header">Live Preview:</div>
+                            <div id="html-preview" class="html-preview"></div>
+                        </div>
+                        <input type="hidden" id="note-content">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Display Order</label>
+                        <input type="number" id="note-order" class="form-input" placeholder="1, 2, 3..."
+                            style="max-width: 100px;">
+                    </div>
+
+                    <div class="editor-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Toast -->
+    <div id="status-toast" class="status-toast"></div>
+
+    <!-- Quill Editor -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <script src="scripts/supabase-client.js"></script>
+    <script src="scripts/admin.js"></script>
+</body>
+
+</html>
