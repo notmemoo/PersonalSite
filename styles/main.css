@@ -541,6 +541,64 @@ body {
     font-weight: 500;
 }
 
+/* Service Overview Styles */
+.service-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1.5em 0;
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--ios-bg-secondary);
+    border-radius: 12px;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid transparent;
+}
+
+.service-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(224, 171, 56, 0.2);
+}
+
+.service-emoji {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.service-item:hover .service-emoji {
+    transform: scale(1.1);
+}
+
+.service-text {
+    flex: 1;
+}
+
+.service-text strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 4px;
+    color: var(--ios-text-primary);
+    transition: color 0.2s ease;
+}
+
+.service-item:hover .service-text strong {
+    color: var(--ios-yellow);
+}
+
+.service-text p {
+    margin: 0 !important;
+    font-size: 15px;
+    color: var(--ios-text-secondary);
+}
+
 /* Last.fm Widget Styles */
 .lastfm-widget {
     background: var(--ios-bg-secondary);

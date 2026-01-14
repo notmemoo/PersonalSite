@@ -6,67 +6,100 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const fallbackNotesData = {
     'who-is-memo': {
         title: "Who is Memo?",
-        date: "January 13, 2026 at 3:50 PM",
-        preview: "I'm the son of immigrants who grew up in a home shaped by...",
+        date: "January 13, 2026 at 7:00 PM",
+        preview: "I'm a web developer and AI-focused builder based in Seattle...",
         content: `
-            <p>I'm the son of immigrants who grew up in a home shaped by addiction and instability. After my father was deported, my mom raised three kids alone, and without guidance, I drifted into my own bad habits for years.</p>
-            <p>Eventually, I stopped seeing myself as a victim and started taking responsibility for who I wanted to become. That shift is why I'm driven to build software and systems that help people who feel stuck or unsupported, because I know what it's like to need help and not have access to it.</p>
-            <h3>What Drives Me</h3>
-            <p>I'm naturally social, love soccer and nature, and I'm all in on self-improvement. Right now, my focus is on using AI, cybersecurity, finance, and pharmacology to create practical tools that solve real problems.</p>
-            <p><b>AI:</b> I stay at the cutting edge of artificial intelligence and focus on helping people understand and integrate it into their lives and businesses in ways that actually matter.</p>
-            <p><b>Finance & Markets:</b> From 2020-2022, I was deep in stocks and crypto—reading charts, tracking world events, and understanding how markets move. That analytical mindset now shapes how I approach problem-solving for clients.</p>
-            <p><b>Cybersecurity & Pharmacology:</b> I'm fascinated by how systems work—whether it's finding vulnerabilities in code, understanding OSINT techniques, or how compounds affect the brain through biohacking and peptides.</p>
-            <p><b>My mission is simple: Use technology to help people who don't have the resources or guidance to help themselves, turning my own experience into something that actually makes a difference.</b></p>
+            <p>I'm a web developer and AI-focused builder based in Seattle, WA. I design and implement clean, fast websites and simple systems for small businesses and solo professionals who want their tech and marketing handled so they can focus on running their business.</p>
+            <p>My work is centered on practical execution: clear offers, responsive sites, basic analytics, and lightweight automations that help clients get found, get booked, and get paid.</p>
+        `
+    },
+    'what-i-do': {
+        title: "What I Do",
+        date: "January 13, 2026 at 7:00 PM",
+        preview: "I help businesses improve their online presence and operations...",
+        content: `
+            <p>I help businesses improve their online presence and operations with a mix of web development, marketing setup, and AI automation.</p>
+            
+            <h3>🌐 Websites & Landing Pages</h3>
+            <p>Design and build responsive, fast-loading websites and landing pages. Focus on clear structure, simple navigation, and easy ways for customers to contact or book.</p>
+            <ul>
+                <li>Mobile-first, responsive design</li>
+                <li>Fast load times and clean code</li>
+                <li>Contact forms and booking integrations</li>
+                <li>Basic SEO setup</li>
+                <li>Hosting and deployment</li>
+            </ul>
+            
+            <h3>📍 Google Business Profiles</h3>
+            <p>Create, claim, and optimize Google Business Profiles so businesses appear properly on Search and Maps. Configure categories, services, descriptions, photos, and links to drive calls, directions, and website visits.</p>
+            <ul>
+                <li>Profile creation or claiming</li>
+                <li>Category and service optimization</li>
+                <li>Photo and description setup</li>
+                <li>Link configuration for calls, directions, and bookings</li>
+                <li>Review response strategy</li>
+            </ul>
+            
+            <h3>📈 Ads & Traffic</h3>
+            <p>Set up straightforward ad campaigns (Google or social) to send targeted traffic to websites or landing pages. Focus on simple campaigns with clear goals such as calls, bookings, or form submissions.</p>
+            <ul>
+                <li>Campaign setup and targeting</li>
+                <li>Ad copy and creative guidance</li>
+                <li>Budget recommendations</li>
+                <li>Basic tracking and reporting</li>
+                <li>Ongoing optimization</li>
+            </ul>
+            
+            <h3>🤖 AI Automation</h3>
+            <p>Use AI tools to automate repetitive tasks like lead capture, basic customer responses, and simple workflows. Integrate AI into existing tools where possible to reduce manual work and improve response times.</p>
+            <ul>
+                <li>Workflow analysis and automation setup</li>
+                <li>AI chatbot or response integration</li>
+                <li>Lead capture and routing automation</li>
+                <li>Tool integration (CRM, email, calendars)</li>
+                <li>Training and documentation</li>
+            </ul>
         `
     },
     'currently': {
-        title: "Currently...",
-        date: "January 13, 2026 at 3:50 PM",
-        preview: "What I'm working on right now. Updated regularly...",
+        title: "Currently",
+        date: "January 13, 2026 at 7:00 PM",
+        preview: "What I'm working on right now...",
         content: `
-            <p>What I'm working on right now. Updated regularly so you know where my focus is.</p>
+            <p>What I'm working on right now.</p>
             <div class="currently-item">
                 <span class="currently-emoji">💻</span>
                 <div class="currently-content">
                     <div class="currently-label">Building</div>
-                    <div class="currently-value">Finishing my personal site, revamping two client projects (<a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> e-commerce, <a href="https://dwaynesite.vercel.app" target="_blank">Dwayne Fitness</a> landing page), and using AI tools to move faster without sacrificing quality.</div>
+                    <div class="currently-value">Personal site plus two active projects (<a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> e-commerce and <a href="https://dwaynesite.vercel.app" target="_blank">Dwayne Fitness</a> site) to showcase live client work.</div>
                 </div>
             </div>
             <div class="currently-item">
-                <span class="currently-emoji">🧠</span>
+                <span class="currently-emoji">📈</span>
                 <div class="currently-content">
-                    <div class="currently-label">Learning</div>
-                    <div class="currently-value">Mastering AI prompting and MCP integration, diving into cybersecurity fundamentals (OSINT, vulnerability research), and sharpening my marketing skills so I can position client work that actually converts.</div>
-                </div>
-            </div>
-            <div class="currently-item">
-                <span class="currently-emoji">📚</span>
-                <div class="currently-content">
-                    <div class="currently-label">Reading</div>
-                    <div class="currently-value">Daily deep-dives on X/Twitter for AI breakthroughs, cybersecurity reports to understand how systems break, and fintech/market analysis to stay sharp on how money and technology intersect.</div>
+                    <div class="currently-label">Improving</div>
+                    <div class="currently-value">AI prompting, front-end fundamentals, and basic marketing skills to make each project more effective, not just visually better.</div>
                 </div>
             </div>
             <div class="currently-item">
                 <span class="currently-emoji">🎯</span>
                 <div class="currently-content">
                     <div class="currently-label">Focused on</div>
-                    <div class="currently-value">Building a foundation where my skills compound: landing 2-3 more client projects this month, tightening my offer so it's crystal clear who I help and how, and turning every project into proof I can deliver results—not just talk about them.</div>
+                    <div class="currently-value">Landing additional small business projects, refining my service offer, and turning every completed project into a clear case study with measurable outcomes.</div>
                 </div>
             </div>
         `
     },
     'thoughts': {
         title: "Thoughts",
-        date: "January 13, 2026 at 3:50 PM",
-        preview: "Random reflections and what's on my mind...",
+        date: "January 13, 2026 at 7:00 PM",
+        preview: "Short updates on what I'm focusing on...",
         content: `
-            <p>Random reflections and what's on my mind. Raw, unfiltered updates on where my head's at.</p>
+            <p>Short updates on what I'm focusing on.</p>
             <div class="journal-entry">
                 <div class="journal-date">January 13, 2026</div>
-                <p>Homework's done, personal site is live, and now I'm focused on shipping client work and sharpening my skills in web development. I've got an app idea brewing, something tied to education and helping people get things done, but I'm not rushing it.</p>
-                <p>Right now, the work is simple: master the fundamentals, build proof with real projects, and resist the urge to jump ahead before the foundation is solid. The market for AI-powered tools that simplify complex topics (finance, health, tech) is wide open, but execution matters more than the idea.</p>
-                <p>For now: UI polish on current projects, no social media distractions, and making sure everything I ship actually works. When the app idea is ready, it'll be backed by real skill and client proof—not just hype.</p>
-                <p><b>Big things are being built, not just talked about.</b></p>
+                <p>Currently refining my personal site, client work, and service list: websites, Google Business Profiles, ads, and AI automation for small businesses. Priority is finishing current builds, improving UI and reliability, and preparing simple case studies for each project.</p>
+                <p>The near-term goal is straightforward: stable delivery of small business projects, clear offers, and repeatable processes for setup, launch, and basic optimization.</p>
             </div>
         `
     },
@@ -107,12 +140,11 @@ const fallbackNotesData = {
         `
     },
     'contact': {
-        title: "Let's Work",
-        date: "January 13, 2026 at 3:50 PM",
-        preview: "If you're a small business owner or someone building something...",
+        title: "Work With Me",
+        date: "January 13, 2026 at 7:00 PM",
+        preview: "If you need a website, Google Business Profile, ads, or AI automation...",
         content: `
-            <p>If you're a small business owner, solo professional, or someone building something that needs a website, backend, or tech support—reach out. I help people who don't have time to figure out the tech side so they can focus on what they're actually good at.</p>
-            <p>Also open to connecting if you're working on something interesting in AI, finance, cybersecurity, or just want to talk shop about building in public.</p>
+            <p>If you need a website, a refresh of your existing site, a Google Business Profile set up correctly, basic ad campaigns, or simple AI automations, I can handle the technical side so you can focus on operations and customers.</p>
             <ul>
                 <li><b>Email:</b> <a href="mailto:gjmartinezjim@gmail.com">gjmartinezjim@gmail.com</a></li>
                 <li><b>Twitter:</b> <a href="https://x.com/powerupmemo" target="_blank">@powerupmemo</a></li>
@@ -147,6 +179,7 @@ const fallbackNotesData = {
         `
     }
 };
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     const noteListEl = document.querySelector('.note-list');
