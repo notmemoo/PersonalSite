@@ -141,17 +141,18 @@ body {
 
 .note-item {
     background-color: transparent;
-    /* Native lists are transparent on gray bg */
     border-radius: 0;
-    /* List items are not rounded cards */
     padding: 12px 20px;
     margin-bottom: 0;
     cursor: pointer;
     box-shadow: none;
-    transition: background-color 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     -webkit-touch-callout: none;
     border-bottom: 1px solid #C6C6C8;
-    /* Separator */
+}
+
+.note-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 .note-item:last-child {
@@ -286,10 +287,12 @@ body {
 .action-icon {
     cursor: pointer;
     opacity: 0.8;
+    transition: all 0.2s ease;
 }
 
 .action-icon:hover {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .note-container {
@@ -297,6 +300,19 @@ body {
     max-width: 800px;
     margin: 0 auto;
     width: 100%;
+    animation: noteContentFade 0.3s ease-out;
+}
+
+@keyframes noteContentFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .note-date {
@@ -355,10 +371,27 @@ body {
 .note-body a {
     color: var(--ios-yellow);
     text-decoration: none;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.note-body a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--ios-yellow);
+    transition: width 0.25s ease;
+}
+
+.note-body a:hover::after {
+    width: 100%;
 }
 
 .note-body a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Project Cards */
@@ -367,11 +400,37 @@ body {
     border-radius: 12px;
     padding: 16px 20px;
     margin: 1em 0;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: rgba(224, 171, 56, 0.2);
 }
 
 .project-card h3 {
     margin-top: 0 !important;
     margin-bottom: 0.3em !important;
+    transition: color 0.2s ease;
+}
+
+.project-card:hover h3 {
+    color: var(--ios-yellow);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--ios-yellow);
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.project-card a:hover {
+    transform: translateX(3px);
 }
 
 /* Journal Entry Styling */
@@ -394,11 +453,25 @@ body {
     gap: 12px;
     margin-bottom: 1em;
     align-items: flex-start;
+    padding: 12px 14px;
+    background: var(--ios-bg-secondary);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.currently-item:hover {
+    transform: translateX(3px);
+    background: rgba(224, 171, 56, 0.08);
 }
 
 .currently-emoji {
     font-size: 24px;
     line-height: 1.2;
+    transition: transform 0.2s ease;
+}
+
+.currently-item:hover .currently-emoji {
+    transform: scale(1.1);
 }
 
 .currently-content {
@@ -728,6 +801,10 @@ body {
         border-bottom-color: var(--ios-separator);
     }
 
+    .note-item:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
     .note-item:active {
         background-color: #2C2C2E;
     }
@@ -782,9 +859,18 @@ body {
         color: var(--ios-yellow);
     }
 
+    .note-body a::after {
+        background-color: var(--ios-yellow);
+    }
+
     /* Project Cards */
     .project-card {
         background: #2C2C2E;
+    }
+
+    .project-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 214, 10, 0.3);
     }
 
     /* Journal Entries */
@@ -797,6 +883,14 @@ body {
     }
 
     /* Currently Section */
+    .currently-item {
+        background: #2C2C2E;
+    }
+
+    .currently-item:hover {
+        background: rgba(255, 214, 10, 0.1);
+    }
+
     .currently-label {
         color: var(--ios-text-secondary);
     }
