@@ -256,8 +256,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Re-attach event listeners
         attachNoteListeners();
 
-        // Load first note
-        if (notes.length > 0) {
+        // Check for hash in URL first, otherwise load first note
+        if (!loadFromHash() && notes.length > 0) {
             loadNote(notes[0].id);
         }
     }
@@ -282,13 +282,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Function to render note
-    function loadNote(noteId) {
+    function loadNote(noteId, updateHash = true) {
         const note = notesData[noteId];
         if (!note) return;
 
         noteTitleEl.textContent = note.title;
         noteDateEl.textContent = note.date;
         noteBodyEl.innerHTML = note.content;
+
+        // Update URL hash for deep linking
+        if (updateHash) {
+            history.replaceState(null, '', `#${noteId}`);
+        }
 
         // Initialize Last.fm widget if this is the Music note
         if (noteId === 'music' && typeof window.LastFMWidget !== 'undefined') {
@@ -304,6 +309,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         const activeItem = document.querySelector(`.note-item[data-id="${noteId}"]`);
         if (activeItem) activeItem.classList.add('active');
     }
+
+    // Load note from URL hash
+    function loadFromHash() {
+        const hash = window.location.hash.slice(1); // Remove the #
+        if (hash && notesData[hash]) {
+            loadNote(hash, false);
+            // On mobile, show the note view
+            if (window.innerWidth <= 768) {
+                appBody.classList.add('view-note');
+            }
+            return true;
+        }
+        return false;
+    }
+
+    // Listen for hash changes (back/forward navigation)
+    window.addEventListener('hashchange', () => {
+        loadFromHash();
+    });
 
     // Attach event listeners to note items
     function attachNoteListeners() {
@@ -329,6 +353,60 @@ document.addEventListener('DOMContentLoaded', async () => {
     mobileBackBtn.addEventListener('click', () => {
         appBody.classList.remove('view-note');
     });
+
+    // Share Button
+    const shareBtn = document.getElementById('share-btn');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+            const currentTitle = noteTitleEl.textContent || "Memo's Notes";
+            // Get the base URL without hash, then add current hash
+            const baseUrl = window.location.href.split('#')[0];
+            const shareUrl = baseUrl + window.location.hash;
+            const shareData = {
+                title: currentTitle,
+                text: `Check out "${currentTitle}" from Memo's Notes`,
+                url: shareUrl
+            };
+
+            try {
+                if (navigator.share) {
+                    // Native share (works great on mobile!)
+                    await navigator.share(shareData);
+                } else {
+                    // Fallback: copy URL to clipboard
+                    await navigator.clipboard.writeText(window.location.href);
+                    showShareToast('Link copied to clipboard!');
+                }
+            } catch (err) {
+                // User cancelled or error
+                if (err.name !== 'AbortError') {
+                    console.log('Share failed:', err);
+                }
+            }
+        });
+    }
+
+    // Toast notification for share feedback
+    function showShareToast(message) {
+        const existing = document.querySelector('.share-toast');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'share-toast';
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Trigger animation
+        requestAnimationFrame(() => {
+            toast.classList.add('show');
+        });
+
+        // Remove after delay
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 2000);
+    }
 
     // Handle Window Resize to reset state if needed
     window.addEventListener('resize', () => {
