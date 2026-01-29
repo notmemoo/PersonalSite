@@ -127,6 +127,12 @@ const fallbackNotesData = {
                 <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;">Features a custom-built admin panel—no third-party CMS provider</p>
                 <a href="https://dwaynesite.vercel.app" target="_blank">Visit Site</a>
             </div>
+
+            <h3 style="margin-top: 32px;">💬 What Clients Say</h3>
+            <div class="project-card" style="border-left: 3px solid #E0AB38;">
+                <p style="font-style: italic;">"Working with Memo on my site went well overall and I appreciated how responsive and patient he was throughout the process. He was open to revisions and made sure the site reflected what I was looking for. I'd recommend his services to anyone needing website development support."</p>
+                <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;"><b style="color: inherit;">— Asher</b>, ASH Performance</p>
+            </div>
         `
     },
     'future': {
