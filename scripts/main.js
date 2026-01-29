@@ -147,14 +147,14 @@ const fallbackNotesData = {
         preview: "Recent projects I've built for clients...",
         content: `
             <div class="project-card">
-                <img src="assets/projects/ash-performance.jpg" alt="ASH Performance website screenshot" style="width:100%; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/projects/ash-performance.png" alt="ASH Performance website screenshot" style="width:100%; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <h3>ASH Performance</h3>
                 <p>A basketball training site for a professional trainer. In-person training with tiered pricing, virtual 1:1 coaching subscription, Skool community integration, and a custom admin panel so the client manages all content themselves.</p>
                 <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;">React · Tailwind CSS · Framer Motion · Express.js · Vercel + Render</p>
                 <a href="https://ashperformance.vercel.app" target="_blank">Visit Site →</a>
             </div>
             <div class="project-card">
-                <img src="assets/projects/varsity-soles.jpg" alt="Varsity Soles website screenshot" style="width:100%; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                <img src="assets/projects/varsity-soles.png" alt="Varsity Soles website screenshot" style="width:100%; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1);">
                 <h3>Varsity Soles</h3>
                 <p>Sneaker restoration e-commerce site with video showcases, before/after galleries, integrated POS, contact form, and a dedicated admin panel for managing inventory and content.</p>
                 <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;">Next.js · React · Vercel</p>
