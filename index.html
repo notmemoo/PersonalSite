@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Memo's Notes</title>
-    <meta name="description" content="Personal portfolio of Memo.">
+    <title>Memo Web Solutions | Web Developer & AI Automation in Tacoma, WA</title>
+    <meta name="description" content="Memo Web Solutions — web development, Google Business Profile setup, SEO, and AI automation for small businesses in Tacoma, WA. Fast, clean websites that get you found and booked.">
+    <meta name="keywords" content="web developer tacoma, website design tacoma wa, small business website, google business profile setup, SEO tacoma, AI automation, freelance web developer washington">
+    <link rel="canonical" href="https://aboutmemo.com/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://notmemoo.github.io/PersonalSite/">
-    <meta property="og:title" content="Memo's Notes">
-    <meta property="og:description" content="Personal Portfolio of Memo. Developer, Designer, problem solver.">
-    <meta property="og:image" content="https://notmemoo.github.io/PersonalSite/assets/og-image.png">
+    <meta property="og:url" content="https://aboutmemo.com/">
+    <meta property="og:title" content="Memo Web Solutions | Web Developer in Tacoma, WA">
+    <meta property="og:description" content="Web development, Google Business Profile setup, SEO, and AI automation for small businesses in Tacoma, WA. Fast, clean websites that get you found and booked.">
+    <meta property="og:image" content="https://aboutmemo.com/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Memo Web Solutions">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Memo's Notes">
-    <meta name="twitter:description" content="Personal Portfolio of Memo.">
-    <meta name="twitter:image" content="https://notmemoo.github.io/PersonalSite/assets/og-image.png">
+    <meta name="twitter:title" content="Memo Web Solutions | Web Developer in Tacoma, WA">
+    <meta name="twitter:description" content="Web development, Google Business Profile setup, SEO, and AI automation for small businesses in Tacoma, WA.">
+    <meta name="twitter:image" content="https://aboutmemo.com/assets/og-image.png">
+    <meta name="twitter:creator" content="@powerupmemo">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/main.css">
@@ -41,6 +46,104 @@
 
     <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Structured Data: LocalBusiness + Person -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://aboutmemo.com/#business",
+                "name": "Memo Web Solutions",
+                "description": "Web development, Google Business Profile setup, SEO optimization, and AI automation for small businesses in Tacoma, WA and surrounding areas.",
+                "url": "https://aboutmemo.com",
+                "email": "gjmartinezjim@gmail.com",
+                "image": "https://aboutmemo.com/assets/og-image.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Tacoma",
+                    "addressRegion": "WA",
+                    "addressCountry": "US"
+                },
+                "areaServed": [
+                    { "@type": "City", "name": "Tacoma" },
+                    { "@type": "City", "name": "Lakewood" },
+                    { "@type": "City", "name": "Puyallup" },
+                    { "@type": "City", "name": "Federal Way" },
+                    { "@type": "City", "name": "University Place" }
+                ],
+                "priceRange": "$$",
+                "sameAs": [
+                    "https://x.com/powerupmemo"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Web Development Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Website Design & Development",
+                                "description": "Mobile-first, responsive websites with clean code, fast load times, and SEO setup."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Google Business Profile Setup",
+                                "description": "Create, claim, and optimize Google Business Profiles for local search visibility."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "SEO Optimization",
+                                "description": "Search engine optimization to help small businesses get found online."
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "AI Automation",
+                                "description": "AI-powered workflow automation, chatbots, and lead capture for small businesses."
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://aboutmemo.com/#website",
+                "url": "https://aboutmemo.com",
+                "name": "Memo Web Solutions",
+                "publisher": { "@id": "https://aboutmemo.com/#business" }
+            },
+            {
+                "@type": "Person",
+                "@id": "https://aboutmemo.com/#person",
+                "name": "Guillermo Martinez",
+                "alternateName": "Memo",
+                "jobTitle": "Web Developer & AI Automation Specialist",
+                "url": "https://aboutmemo.com",
+                "sameAs": [
+                    "https://x.com/powerupmemo"
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Tacoma",
+                    "addressRegion": "WA",
+                    "addressCountry": "US"
+                },
+                "worksFor": { "@id": "https://aboutmemo.com/#business" }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>

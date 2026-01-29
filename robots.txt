@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aboutmemo.com/sitemap.xml

@@ -7,9 +7,9 @@ const fallbackNotesData = {
     'who-is-memo': {
         title: "Who is Memo?",
         date: "January 13, 2026 at 7:00 PM",
-        preview: "I'm a web developer and AI-focused builder based in Seattle...",
+        preview: "I'm a web developer and AI-focused builder based in Tacoma...",
         content: `
-            <p>I'm a web developer and AI-focused builder based in Seattle, WA. I design and implement clean, fast websites and simple systems for small businesses and solo professionals who want their tech and marketing handled so they can focus on running their business.</p>
+            <p>I'm a web developer and AI-focused builder based in Tacoma, WA. I design and implement clean, fast websites and simple systems for small businesses and solo professionals who want their tech and marketing handled so they can focus on running their business.</p>
             <p>My work is centered on practical execution: clear offers, responsive sites, basic analytics, and lightweight automations that help clients get found, get booked, and get paid.</p>
         `
     },
@@ -154,7 +154,7 @@ const fallbackNotesData = {
             <ul>
                 <li><b>Email:</b> <a href="mailto:gjmartinezjim@gmail.com">gjmartinezjim@gmail.com</a></li>
                 <li><b>Twitter:</b> <a href="https://x.com/powerupmemo" target="_blank">@powerupmemo</a></li>
-                <li><b>Location:</b> Seattle, WA</li>
+                <li><b>Location:</b> Tacoma, WA</li>
             </ul>
         `
     },
