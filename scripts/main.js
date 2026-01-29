@@ -44,11 +44,14 @@ const fallbackNotesData = {
     },
     'who-is-memo': {
         title: "Who is Memo?",
-        date: "January 13, 2026 at 7:00 PM",
-        preview: "I'm a web developer and AI-focused builder based in Tacoma...",
+        date: "January 29, 2026 at 2:00 PM",
+        preview: "Self-taught builder from Tacoma who turned adversity into drive...",
         content: `
-            <p>I'm a web developer and AI-focused builder based in Tacoma, WA. I design and implement clean, fast websites and simple systems for small businesses and solo professionals who want their tech and marketing handled so they can focus on running their business.</p>
-            <p>My work is centered on practical execution: clear offers, responsive sites, basic analytics, and lightweight automations that help clients get found, get booked, and get paid.</p>
+            <p>I'm <b>Guillermo</b> — everyone calls me <b>Memo</b>. I'm a self-taught web developer and AI-focused builder based in Tacoma, WA.</p>
+            <p>I grew up in a home shaped by instability — my father was deported when I was young, leaving my mom to raise three kids on her own. I didn't take the traditional path. I dropped out of high school, made mistakes, and spent years figuring out who I wanted to be.</p>
+            <p>What changed everything was realizing I could either stay stuck or build something. I chose to build. I taught myself to code, dove deep into AI, and discovered I had a knack for solving problems and helping people — whether that's building a website, setting up their digital presence, or just being the person in the room who actually gets things done.</p>
+            <p>Now I channel that same energy into helping small businesses compete online. I know what it's like to start from nothing and figure it out as you go — that's exactly the mindset I bring to every project.</p>
+            <p><b>My goal:</b> Use technology to create opportunities for people who don't have a roadmap, and build something my family can be proud of.</p>
         `
     },
     'what-i-do': {
@@ -101,7 +104,7 @@ const fallbackNotesData = {
     },
     'currently': {
         title: "Currently",
-        date: "January 13, 2026 at 7:00 PM",
+        date: "January 29, 2026 at 2:00 PM",
         preview: "What I'm working on right now...",
         content: `
             <p>What I'm working on right now.</p>
@@ -109,21 +112,28 @@ const fallbackNotesData = {
                 <span class="currently-emoji">💻</span>
                 <div class="currently-content">
                     <div class="currently-label">Building</div>
-                    <div class="currently-value">Personal site plus active client projects including <a href="https://ashperformance.vercel.app" target="_blank">ASH Performance</a> (basketball training), <a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> (e-commerce), and a local contractor site in progress.</div>
+                    <div class="currently-value">Active client projects including <a href="https://ashperformance.vercel.app" target="_blank">ASH Performance</a> (basketball training) and <a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> (e-commerce), plus a local contractor site in progress.</div>
+                </div>
+            </div>
+            <div class="currently-item">
+                <span class="currently-emoji">🔒</span>
+                <div class="currently-content">
+                    <div class="currently-label">Lock In App</div>
+                    <div class="currently-value">Developing a productivity app designed to help people stay focused and locked in on their goals. More details coming soon.</div>
                 </div>
             </div>
             <div class="currently-item">
                 <span class="currently-emoji">📈</span>
                 <div class="currently-content">
-                    <div class="currently-label">Improving</div>
-                    <div class="currently-value">AI prompting, front-end fundamentals, and basic marketing skills to make each project more effective, not just visually better.</div>
+                    <div class="currently-label">Leveling Up</div>
+                    <div class="currently-value">Polishing my front-end skills, deepening my AI and automation knowledge, and studying UI/UX design to make every project look and perform better.</div>
                 </div>
             </div>
             <div class="currently-item">
                 <span class="currently-emoji">🎯</span>
                 <div class="currently-content">
                     <div class="currently-label">Focused on</div>
-                    <div class="currently-value">Landing additional small business projects, refining my service offer, and turning every completed project into a clear case study with measurable outcomes.</div>
+                    <div class="currently-value">Landing more small business clients, building case studies from completed work, and growing Memo Web Solutions into a sustainable business.</div>
                 </div>
             </div>
         `
