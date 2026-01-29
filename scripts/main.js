@@ -71,7 +71,7 @@ const fallbackNotesData = {
                 <span class="currently-emoji">💻</span>
                 <div class="currently-content">
                     <div class="currently-label">Building</div>
-                    <div class="currently-value">Personal site plus two active projects (<a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> e-commerce and <a href="https://dwaynesite.vercel.app" target="_blank">Dwayne Fitness</a> site) to showcase live client work.</div>
+                    <div class="currently-value">Personal site plus active client projects including <a href="https://ashperformance.vercel.app" target="_blank">ASH Performance</a> (basketball training), <a href="https://varsitysoles.vercel.app" target="_blank">Varsity Soles</a> (e-commerce), and a local contractor site in progress.</div>
                 </div>
             </div>
             <div class="currently-item">
@@ -116,10 +116,10 @@ const fallbackNotesData = {
                 <a href="https://varsitysoles.vercel.app" target="_blank">Visit Site</a>
             </div>
             <div class="project-card">
-                <h3>Super Steve Massage</h3>
-                <p>Another project I've been working on for a friend. Showcases all of his services with a well-thought-out "About Me" section, smooth scroll animations, and a Google Maps embed. Includes a dedicated backend for payments, customer intake forms, and customer inquiries.</p>
-                <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;">Built with Next.js, React, Google Maps API, and deployed on Vercel</p>
-                <a href="https://superstevemassage.vercel.app" target="_blank">Visit Site</a>
+                <h3>ASH Performance</h3>
+                <p>A basketball training site built for a professional trainer. Features an in-person training section with tiered pricing for athletic development, skill development, and complete player packages. Includes a virtual 1:1 coaching subscription, Skool community integration, SEO optimization, and a custom admin panel for managing all site content.</p>
+                <p style="color: #8E8E93; font-size: 0.9em; margin-top: 8px;">Built with React, Tailwind CSS, Framer Motion, Express.js backend, and deployed on Vercel + Render</p>
+                <a href="https://ashperformance.vercel.app" target="_blank">Visit Site</a>
             </div>
             <div class="project-card">
                 <h3>Dwayne Fitness</h3>
