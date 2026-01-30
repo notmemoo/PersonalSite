@@ -543,7 +543,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Contact Form Handler
+    // Contact Form Handler — Formspree
     document.addEventListener('submit', async (e) => {
         if (e.target.id !== 'contact-form') return;
         e.preventDefault();
@@ -554,28 +554,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         btn.textContent = 'Sending...';
         btn.disabled = true;
 
-        const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            business: form.business.value,
-            service: form.service.value,
-            message: form.message.value,
-            submitted_at: new Date().toISOString()
-        };
+        const formData = new FormData(form);
 
         try {
-            if (supabaseClient) {
-                await supabaseClient.from('contact_submissions').insert(formData);
+            const response = await fetch('https://formspree.io/f/xykjpjpk', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                btn.textContent = '✅ Sent!';
+                btn.style.background = '#34C759';
+                form.reset();
+                showShareToast('Message sent! I\'ll get back to you within 24 hours.');
+            } else {
+                throw new Error('Form submission failed');
             }
-            // Also send via mailto as backup
-            const subject = encodeURIComponent(`New inquiry from ${formData.name}`);
-            const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nBusiness: ${formData.business}\nService: ${formData.service}\nMessage: ${formData.message}`);
-
-            btn.textContent = '✅ Sent!';
-            btn.style.background = '#34C759';
-            form.reset();
-
-            showShareToast('Message sent! I\'ll get back to you within 24 hours.');
 
             setTimeout(() => {
                 btn.textContent = originalText;
