@@ -256,7 +256,7 @@ const fallbackNotesData = {
         content: `
             <p>Tell me about your project and I'll get back to you within 24 hours.</p>
             
-            <form id="contact-form" style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+            <form id="contact-form" action="https://formspree.io/f/xykjpjpk" method="POST" style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
                 <input type="text" name="name" placeholder="Your name" required style="padding: 12px; border-radius: 8px; border: 1px solid rgba(142,142,147,0.3); background: rgba(142,142,147,0.08); color: inherit; font-size: 1em; font-family: inherit;">
                 <input type="email" name="email" placeholder="Your email" required style="padding: 12px; border-radius: 8px; border: 1px solid rgba(142,142,147,0.3); background: rgba(142,142,147,0.08); color: inherit; font-size: 1em; font-family: inherit;">
                 <input type="text" name="business" placeholder="Business name (optional)" style="padding: 12px; border-radius: 8px; border: 1px solid rgba(142,142,147,0.3); background: rgba(142,142,147,0.08); color: inherit; font-size: 1em; font-family: inherit;">
